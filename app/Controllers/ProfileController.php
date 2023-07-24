@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Database\Migrations\Matakuliah;
 use App\Models\MahasiswaModel;
 use App\Models\MatkulModel;
-use App\Models\Nilai;
+use App\Models\NilaiModel;
 
 class ProfileController extends BaseController
 {
@@ -24,7 +24,7 @@ class ProfileController extends BaseController
 
     public function getAllNilai()
     {
-        $model = new Nilai();
+        $model = new NilaiModel();
         $data['nilai'] = $model->findAll();
         // return json_encode(
         //     array(
